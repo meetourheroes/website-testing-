@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
-    <link rel="stylesheet" href="css/style.css">
-            <nav class="page-nav">
-            <a href="index.html" class="nav-button active">Home</a>
-            <a href="authors.html" class="nav-button">Meet the Authors</a>
-            <a href="contact.html" class="nav-button">contact us </a>    
-        </nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<form
-  action="https://formspree.io/f/manbzdvr"
-  class="fs-form"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="name">Name</label>
-    <input class="fs-input" id="name" name="name" />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea class="fs-textarea" id="message" name="message"></textarea>
-    <p class="fs-description">We usually respond within 1-2 business days.</p>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Send</button>
-  </div>
-</form>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <h1>Hero’s In Action</h1>
+    <p class="subtitle">Promoting safety & trust through fun learning</p>
+    <nav class="page-nav">
+      <a href="index.html" class="nav-button">Home</a>
+      <a href="authors.html" class="nav-button">Meet the Authors</a>
+      <a href="contact.html" class="nav-button active">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main>
+    <section class="contact-section">
+      <!-- Fun Icon -->
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/561/561127.png" 
+        alt="Mail Icon" 
+        class="contact-icon"
+      />
+
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Please fill out the form below and we’ll get back to you within 1–2 business days.</p>
+      
+      <form
+        action="https://formspree.io/f/manbzdvr"
+        class="fs-form"
+        target="_top"
+        method="POST"
+      >
+        <div class="fs-field">
+          <label class="fs-label" for="name">Name</label>
+          <input class="fs-input" id="name" name="name" required />
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="email">Email</label>
+          <input class="fs-input" id="email" name="email" type="email" required />
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="message">Message</label>
+          <textarea class="fs-textarea" id="message" name="message" rows="5" required></textarea>
+          <p class="fs-description">We usually respond within 1–2 business days.</p>
+        </div>
+
+        <div class="fs-button-group">
+          <button class="fs-button" type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hero’s In Action LLC – All rights reserved.</p>
+  </footer>
+</body>
 </html>
