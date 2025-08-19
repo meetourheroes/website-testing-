@@ -1,479 +1,102 @@
 /* ========================================
-   Global Styles & Theme
-   Educational and Fun Theme for Coloring Book Website
-   ======================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap");
-
-/* Base body styles */
-body {
-    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
-    background: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%);
-    margin: 0;
-    padding: 0;
-    color: #364958;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* ========================================
-   Header & Navigation
-   ======================================== */
-
-header {
-    background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem 1rem;
-    border-bottom: 6px solid #ff6f61;
-    box-shadow: 0 4px 16px rgba(84,210,210,0.10);
-}
-
-h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 4px #ffb34780;
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    margin-top: 0;
-    font-weight: 500;
-    color: #364958; /* Light mode color */
-    text-shadow: 1px 1px 4px #b7eaff90;
-}
-
-.page-nav {
-    display: flex;
-    justify-content: center;
-    gap: 3.1rem;
-    margin: 1.2rem 0;
-}
-
-.nav-button {
-    display: inline-block;
-    padding: 0.85rem 2.2rem;
-    background: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
-    color: #364958;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 2px solid #ffb347;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(255,182,71,0.12), 0 0 0 4px #fffbe6;
-    transition: background 0.3s, transform 0.2s, color 0.3s;
-    outline: none;
-    position: relative;
-}
-
-.nav-button:hover,
-.nav-button.active {
-    background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
-    color: #fff;
-    transform: scale(1.09);
-    box-shadow: 0 4px 12px rgba(84,210,210,0.18), 0 0 0 6px #ffe29a;
-}
-
-/* ========================================
-   Book Section
-   ======================================== */
-
-.book-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2.2rem;
-    margin: 2.5rem auto 2rem;
-    max-width: 950px;
-}
-
-.book-cover {
-    width: 310px;
-    height: 420px;
-    object-fit: cover;
-    border: 6px dashed #54d2d2;
-    box-shadow: 0 6px 18px rgba(84,210,210,0.18);
-    border-radius: 18px;
-    background: #fff;
-}
-
-.book-details {
-    flex: 1;
-    min-width: 260px;
-    background: #fffbe6;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(54,73,88,0.09);
-    padding: 2rem 2rem 1.2rem;
-}
-
-.book-details h2 {
-    color: #54d2d2;
-    margin-top: 0;
-    text-shadow: 1px 1px 2px #b7eaff80;
-}
-
-.book-details ul {
-    list-style: disc inside;
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    color: #364958;
-}
-
-.buy-button {
-    display: inline-block;
-    padding: 0.8rem 2.2rem;
-    background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
-    color: #364958;
-    font-size: 1.25rem;
-    font-weight: bold;
-    border: 2px solid #54d2d2;
-    border-radius: 32px;
-    text-decoration: none;
-    margin-top: 1.2rem;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 8px rgba(84,210,210,0.12);
-    transition: background 0.3s, color 0.3s, transform 0.2s;
-}
-
-.buy-button:hover {
-    background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
-    color: #fff;
-    transform: scale(1.07);
-}
-
-/* ========================================
-   Authors Section
-   ======================================== */
-
-.authors-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.2rem;
-    margin: 3rem auto;
-    max-width: 950px;
-}
-
-.author-card {
-    background: #e9faff;
-    border-radius: 22px;
-    box-shadow: 0 2px 12px rgba(54,73,88,0.07);
-    padding: 2rem 1.5rem 1.2rem;
-    text-align: center;
-    width: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px dashed #ffb347;
-}
-
-.author-photo {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #54d2d2;
-    box-shadow: 0 2px 8px rgba(84,210,210,0.12);
-    background: #fff;
-    margin-bottom: 1.2rem;
-}
-
-.author-name {
-    font-size: 1.35rem;
-    color: #ff6f61;
-    margin: 0.5rem 0 0.8rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.author-bio {
-    font-size: 1.05rem;
-    color: #364958;
-    margin: 0;
-}
-
-/* ========================================
-   Shared Info Sections
-   ======================================== */
-
-.why-section, .contact-section {
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 700px;
-    background: #ffe29a;
-    padding: 1.6rem 1rem;
-    border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(255,182,71,0.09);
-    border: 2px solid #54d2d2;
-}
-
-.why-section h2, .contact-section h2 {
-    color: #54d2d2;
-    margin-bottom: 0.5rem;
-}
-
-/* ========================================
-   Footer
-   ======================================== */
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
-    color: #364958;
-    font-size: 1.1rem;
-    margin-top: 2rem;
-    border-top: 4px solid #ff6f61;
-    box-shadow: 0 -2px 10px rgba(255,182,71,0.09);
-}
-
-/* ========================================
-   Form Styles (Re-themed)
+   Global Theme Variables
    ======================================== */
 
 :root {
-  --color-background: #ffe29a;
-  --color-background-alt: #e9faff;
-  --color-border-active: #54d2d2;
-  --color-border-default: #ffb347;
-  --color-highlight: #ff6f61;
-  --color-primary: #54d2d2;
-  --color-primary-active: #ffb347;
-  --color-text-default: #364958;
-  --color-text-muted: #6b7280;
-
-  --font-family-body: "Work Sans", system-ui, sans-serif;
-  --font-family-display: "IBM Plex Serif", system-ui, sans-serif;
+  --bg: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%);
+  --text: #364958;
+  --subtitle: #364958;
+  --header-bg: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
+  --footer-bg: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
 }
 
-.fs-form {
-  display: grid;
-  row-gap: 1.5rem;
+.dark-mode {
+  --bg: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  --text: #ffffff;
+  --subtitle: #ffffff;
+  --header-bg: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+  --footer-bg: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
 }
 
-.fs-field {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.375rem;
+/* ========================================
+   Base Styles
+   ======================================== */
+
+body {
+  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
-.fs-label {
-  color: var(--color-text-default);
-  font-family: var(--font-family-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.fs-input,
-.fs-select,
-.fs-textarea {
-  border-radius: 0.5rem;
-  border: 2px solid var(--color-border-default);
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-family: var(--font-family-body);
-  background: #fff;
-  color: var(--color-text-default);
-  box-shadow: 0 2px 6px rgba(84,210,210,0.12);
-  transition: all 0.2s;
-}
-
-.fs-input:focus,
-.fs-select:focus,
-.fs-textarea:focus {
-  border-color: var(--color-border-active);
-  box-shadow: 0 0 0 4px #ffe29a;
-  outline: none;
-}
-
-.fs-button {
-  background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
-  border-radius: 32px;
+header {
+  background: var(--header-bg);
   color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.9rem 2rem;
-  border: none;
-  box-shadow: 0 2px 6px rgba(84,210,210,0.18);
-  transition: transform 0.2s, background 0.3s;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 6px solid #ff6f61;
 }
 
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--subtitle);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--footer-bg);
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  border-top: 4px solid #ff6f61;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.nav-button,
+.buy-button,
+.fs-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 2px solid #54d2d2;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-button:hover,
+.buy-button:hover,
 .fs-button:hover {
   background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
+  color: #fff;
   transform: scale(1.05);
 }
 
 /* ========================================
-   Responsive
+   Theme Toggle Switch (Top Right)
    ======================================== */
 
-@media (max-width: 900px) {
-    .book-section,
-    .authors-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    .book-cover,
-    .author-card {
-        margin-bottom: 1rem;
-    }
-    .book-details {
-        padding: 1rem 1rem 1rem;
-    }
-}
-/* Fun Contact Icon */
-.contact-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1rem;
-  transition: transform 0.2s ease-in-out;
-}
-
-.contact-icon:hover {
-  animation: wiggle 0.5s ease-in-out infinite;
-}
-
-@keyframes wiggle {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-10deg); }
-  75% { transform: rotate(10deg); }
-}
-.success-message {
-  display: none;
-}
-
-/* ========================================
-   Dark Mode Support (Final Fix with Gradients)
-   ======================================== */
-
-/* System Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #121212;
-    --color-background-alt: #1e1e1e;
-    --color-border-active: #9ecbff;
-    --color-border-default: #555;
-    --color-highlight: #ffb347;
-    --color-primary: #54d2d2;
-    --color-primary-active: #ff6f61;
-    --color-text-default: #ffffff; /* brighter for readability */
-    --color-text-muted: #cccccc;  /* softer muted text */
-  }
-
-  body {
-    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
-    color: var(--color-text-default);
-  }
-
-  header {
-    background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
-    border-bottom: 6px solid var(--color-highlight);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-  }
-
-  footer {
-    background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
-    border-top: 4px solid var(--color-highlight);
-    color: var(--color-text-default);
-  }
-
-  .subtitle {
-    color: #ffffff; /* White subtitle in dark mode */
-  }
-
-  .book-details,
-  .author-card,
-  .why-section,
-  .contact-section {
-    background: var(--color-background-alt);
-    color: var(--color-text-default);
-    border-color: var(--color-border-default);
-  }
-
-  .nav-button,
-  .buy-button,
-  .fs-button {
-    color: var(--color-text-default);
-  }
-}
-
-/* Force Light Mode */
-body.light-mode {
-  --color-background: #ffe29a;
-  --color-background-alt: #e9faff;
-  --color-border-active: #54d2d2;
-  --color-border-default: #ffb347;
-  --color-highlight: #ff6f61;
-  --color-primary: #54d2d2;
-  --color-primary-active: #ffb347;
-  --color-text-default: #364958;
-  --color-text-muted: #6b7280;
-
-  background: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%) !important;
-  color: #364958;
-}
-
-body.light-mode header {
-  background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%) !important;
-  border-bottom: 6px solid #ff6f61;
-  box-shadow: 0 4px 16px rgba(84,210,210,0.10);
-}
-
-body.light-mode footer {
-  background: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%) !important;
-  border-top: 4px solid #ff6f61;
-  color: #364958;
-  box-shadow: 0 -2px 10px rgba(255,182,71,0.09);
-}
-
-body.light-mode .subtitle {
-  color: #364958 !important;
-}
-
-/* Force Dark Mode */
-body.dark-mode {
-  --color-background: #121212;
-  --color-background-alt: #1e1e1e;
-  --color-border-active: #9ecbff;
-  --color-border-default: #555;
-  --color-highlight: #ffb347;
-  --color-primary: #54d2d2;
-  --color-primary-active: #ff6f61;
-  --color-text-default: #ffffff;
-  --color-text-muted: #cccccc;
-
-  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
-  color: #ffffff;
-}
-
-body.dark-mode header {
-  background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%) !important;
-  border-bottom: 6px solid #ffb347;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
-
-body.dark-mode footer {
-  background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%) !important;
-  border-top: 4px solid #ffb347;
-  color: #ffffff;
-}
-
-body.dark-mode .subtitle {
-  color: #ffffff !important;
-}
-
-/* ========================================
-   Theme Toggle Switch (Slider)
-   ======================================== */
 .theme-switch {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  display: inline-block;
-  width: 60px;
+  top: 1rem;
+  right: 1rem;
+  width: 100px;
   height: 34px;
   z-index: 1000;
 }
@@ -485,35 +108,34 @@ body.dark-mode .subtitle {
 }
 
 .slider {
-  position: absolute;
+  position: relative;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
   background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
   transition: 0.4s;
-  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 .slider:before {
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
+  content: attr(data-light);
+  left: 10px;
   transition: 0.4s;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Checked (Dark Mode) */
 input:checked + .slider {
   background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  content: attr(data-dark);
+  left: auto;
+  right: 10px;
 }
