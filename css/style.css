@@ -1,6 +1,8 @@
 /* ========================================
-   Global Theme Variables
+   Global Styles & Theme
    ======================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap");
 
 :root {
   --bg: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%);
@@ -19,7 +21,7 @@
 }
 
 /* ========================================
-   Base Styles
+   Base Body
    ======================================== */
 
 body {
@@ -30,6 +32,10 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
+
+/* ========================================
+   Header & Footer
+   ======================================== */
 
 header {
   background: var(--header-bg);
@@ -42,11 +48,13 @@ header {
 h1 {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
   font-size: 1.3rem;
+  margin-top: 0;
   font-weight: 500;
   color: var(--subtitle);
 }
@@ -89,7 +97,7 @@ footer {
 }
 
 /* ========================================
-   Theme Toggle Switch (Top Right)
+   Theme Toggle Switch (Top Right with Labels)
    ======================================== */
 
 .theme-switch {
