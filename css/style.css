@@ -46,8 +46,8 @@ h1 {
 .page-nav {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin: 3rem 0;
+    gap: 3rem;
+    margin: 1.2rem 0;
 }
 
 .nav-button {
