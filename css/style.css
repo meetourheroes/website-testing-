@@ -39,7 +39,7 @@ h1 {
     font-size: 1.3rem;
     margin-top: 0;
     font-weight: 500;
-    color: #364958;
+    color: #364958; /* Light mode color */
     text-shadow: 1px 1px 4px #b7eaff90;
 }
 
@@ -359,8 +359,8 @@ footer {
     --color-highlight: #ffb347;
     --color-primary: #54d2d2;
     --color-primary-active: #ff6f61;
-    --color-text-default: #ffffff;
-    --color-text-muted: #cccccc;
+    --color-text-default: #ffffff; /* brighter for readability */
+    --color-text-muted: #cccccc;  /* softer muted text */
   }
 
   body {
@@ -378,6 +378,10 @@ footer {
     background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
     border-top: 4px solid var(--color-highlight);
     color: var(--color-text-default);
+  }
+
+  .subtitle {
+    color: #ffffff; /* White subtitle in dark mode */
   }
 
   .book-details,
@@ -425,6 +429,10 @@ body.light-mode footer {
   box-shadow: 0 -2px 10px rgba(255,182,71,0.09);
 }
 
+body.light-mode .subtitle {
+  color: #364958 !important;
+}
+
 /* Force Dark Mode */
 body.dark-mode {
   --color-background: #121212;
@@ -434,11 +442,11 @@ body.dark-mode {
   --color-highlight: #ffb347;
   --color-primary: #54d2d2;
   --color-primary-active: #ff6f61;
-  --color-text-default: #f0f0f0;
-  --color-text-muted: #bbbbbb;
+  --color-text-default: #ffffff;
+  --color-text-muted: #cccccc;
 
   background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
-  color: #f0f0f0;
+  color: #ffffff;
 }
 
 body.dark-mode header {
@@ -450,7 +458,11 @@ body.dark-mode header {
 body.dark-mode footer {
   background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%) !important;
   border-top: 4px solid #ffb347;
-  color: #f0f0f0;
+  color: #ffffff;
+}
+
+body.dark-mode .subtitle {
+  color: #ffffff !important;
 }
 
 /* ========================================
