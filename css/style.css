@@ -1,105 +1,419 @@
 /* ========================================
    Global Styles & Theme
+   Educational and Fun Theme for Coloring Book Website
    ======================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap");
 
-:root {
-  --bg: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%);
-  --text: #364958;
-  --subtitle: #364958;
-  --header-bg: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
-  --footer-bg: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
-}
-
-.dark-mode {
-  --bg: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
-  --text: #ffffff;
-  --subtitle: #ffffff;
-  --header-bg: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
-  --footer-bg: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
-}
-
-/* ========================================
-   Base Body
-   ======================================== */
-
+/* Base body styles */
 body {
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', Arial, sans-serif;
+    background: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%);
+    margin: 0;
+    padding: 0;
+    color: #364958;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ========================================
-   Header & Footer
+   Header & Navigation
    ======================================== */
 
 header {
-  background: var(--header-bg);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  border-bottom: 6px solid #ff6f61;
+    background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    border-bottom: 6px solid #ff6f61;
+    box-shadow: 0 4px 16px rgba(84,210,210,0.10);
 }
 
 h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 4px #ffb34780;
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  margin-top: 0;
-  font-weight: 500;
-  color: var(--subtitle);
+    font-size: 1.3rem;
+    margin-top: 0;
+    font-weight: 500;
+    color: #364958;
+    text-shadow: 1px 1px 4px #b7eaff90;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--footer-bg);
-  color: var(--text);
-  font-size: 1.1rem;
-  margin-top: 2rem;
-  border-top: 4px solid #ff6f61;
+.page-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3.1rem;
+    margin: 1.2rem 0;
 }
 
-/* ========================================
-   Buttons
-   ======================================== */
-
-.nav-button,
-.buy-button,
-.fs-button {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
-  color: var(--text);
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: 2px solid #54d2d2;
-  border-radius: 32px;
-  text-decoration: none;
-  transition: 0.3s;
+.nav-button {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
+    color: #364958;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #ffb347;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255,182,71,0.12), 0 0 0 4px #fffbe6;
+    transition: background 0.3s, transform 0.2s, color 0.3s;
+    outline: none;
+    position: relative;
 }
 
 .nav-button:hover,
-.buy-button:hover,
+.nav-button.active {
+    background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
+    color: #fff;
+    transform: scale(1.09);
+    box-shadow: 0 4px 12px rgba(84,210,210,0.18), 0 0 0 6px #ffe29a;
+}
+
+/* ========================================
+   Book Section
+   ======================================== */
+
+.book-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.2rem;
+    margin: 2.5rem auto 2rem;
+    max-width: 950px;
+}
+
+.book-cover {
+    width: 310px;
+    height: 420px;
+    object-fit: cover;
+    border: 6px dashed #54d2d2;
+    box-shadow: 0 6px 18px rgba(84,210,210,0.18);
+    border-radius: 18px;
+    background: #fff;
+}
+
+.book-details {
+    flex: 1;
+    min-width: 260px;
+    background: #fffbe6;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(54,73,88,0.09);
+    padding: 2rem 2rem 1.2rem;
+}
+
+.book-details h2 {
+    color: #54d2d2;
+    margin-top: 0;
+    text-shadow: 1px 1px 2px #b7eaff80;
+}
+
+.book-details ul {
+    list-style: disc inside;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #364958;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
+    color: #364958;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid #54d2d2;
+    border-radius: 32px;
+    text-decoration: none;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(84,210,210,0.12);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.buy-button:hover {
+    background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
+    color: #fff;
+    transform: scale(1.07);
+}
+
+/* ========================================
+   Authors Section
+   ======================================== */
+
+.authors-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+    margin: 3rem auto;
+    max-width: 950px;
+}
+
+.author-card {
+    background: #e9faff;
+    border-radius: 22px;
+    box-shadow: 0 2px 12px rgba(54,73,88,0.07);
+    padding: 2rem 1.5rem 1.2rem;
+    text-align: center;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed #ffb347;
+}
+
+.author-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #54d2d2;
+    box-shadow: 0 2px 8px rgba(84,210,210,0.12);
+    background: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.author-name {
+    font-size: 1.35rem;
+    color: #ff6f61;
+    margin: 0.5rem 0 0.8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.author-bio {
+    font-size: 1.05rem;
+    color: #364958;
+    margin: 0;
+}
+
+/* ========================================
+   Shared Info Sections
+   ======================================== */
+
+.why-section, .contact-section {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 700px;
+    background: #ffe29a;
+    padding: 1.6rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(255,182,71,0.09);
+    border: 2px solid #54d2d2;
+}
+
+.why-section h2, .contact-section h2 {
+    color: #54d2d2;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #54d2d2 0%, #ffe29a 100%);
+    color: #364958;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    border-top: 4px solid #ff6f61;
+    box-shadow: 0 -2px 10px rgba(255,182,71,0.09);
+}
+
+/* ========================================
+   Form Styles (Re-themed)
+   ======================================== */
+
+:root {
+  --color-background: #ffe29a;
+  --color-background-alt: #e9faff;
+  --color-border-active: #54d2d2;
+  --color-border-default: #ffb347;
+  --color-highlight: #ff6f61;
+  --color-primary: #54d2d2;
+  --color-primary-active: #ffb347;
+  --color-text-default: #364958;
+  --color-text-muted: #6b7280;
+
+  --font-family-body: "Work Sans", system-ui, sans-serif;
+  --font-family-display: "IBM Plex Serif", system-ui, sans-serif;
+}
+
+.fs-form {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.fs-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.375rem;
+}
+
+.fs-label {
+  color: var(--color-text-default);
+  font-family: var(--font-family-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.fs-input,
+.fs-select,
+.fs-textarea {
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-border-default);
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: var(--font-family-body);
+  background: #fff;
+  color: var(--color-text-default);
+  box-shadow: 0 2px 6px rgba(84,210,210,0.12);
+  transition: all 0.2s;
+}
+
+.fs-input:focus,
+.fs-select:focus,
+.fs-textarea:focus {
+  border-color: var(--color-border-active);
+  box-shadow: 0 0 0 4px #ffe29a;
+  outline: none;
+}
+
+.fs-button {
+  background: linear-gradient(90deg, #ffb347 0%, #54d2d2 100%);
+  border-radius: 32px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border: none;
+  box-shadow: 0 2px 6px rgba(84,210,210,0.18);
+  transition: transform 0.2s, background 0.3s;
+}
+
 .fs-button:hover {
   background: linear-gradient(90deg, #54d2d2 0%, #ffb347 100%);
-  color: #fff;
   transform: scale(1.05);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 900px) {
+    .book-section,
+    .authors-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .book-cover,
+    .author-card {
+        margin-bottom: 1rem;
+    }
+    .book-details {
+        padding: 1rem 1rem 1rem;
+    }
+}
+/* Fun Contact Icon */
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-icon:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+.success-message {
+  display: none;
+}
+
+/* ========================================
+   Dark Mode Overrides
+   ======================================== */
+
+.dark-mode body {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+  border-bottom: 6px solid #ff6f61;
+  color: #fff;
+}
+
+.dark-mode .subtitle {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+.dark-mode .nav-button {
+  background: linear-gradient(90deg, #3a3a3a 0%, #5a5a5a 100%);
+  color: #fff;
+  border: 2px solid #777;
+  box-shadow: none;
+}
+
+.dark-mode .nav-button:hover,
+.dark-mode .nav-button.active {
+  background: linear-gradient(90deg, #5a5a5a 0%, #3a3a3a 100%);
+  color: #fff;
+}
+
+.dark-mode .book-details {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.dark-mode .book-details h2 {
+  color: #ffb347;
+}
+
+.dark-mode .author-card {
+  background: #2a2a2a;
+  border: 2px dashed #777;
+  color: #fff;
+}
+
+.dark-mode .why-section,
+.dark-mode .contact-section {
+  background: #3a3a3a;
+  border: 2px solid #777;
+  color: #fff;
+}
+
+.dark-mode .why-section h2,
+.dark-mode .contact-section h2 {
+  color: #ffb347;
+}
+
+.dark-mode footer {
+  background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+  color: #fff;
+  border-top: 4px solid #ff6f61;
 }
 
 /* ========================================
    Theme Toggle Switch (Top Right with Labels)
    ======================================== */
-
 .theme-switch {
   position: fixed;
   top: 1rem;
