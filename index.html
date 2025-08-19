@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Theme Toggle -->
+  <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <div class="slider" data-light="Light" data-dark="Dark"></div>
+  </label>
     <header>
         <h1>Heroes in action!</h1>
         <p class="subtitle">A Coloring Book to Learn & Connect with First Responders</p>
@@ -47,43 +52,31 @@
     <footer>
         <p>© 2025 Heroes in action LLC</p>
     </footer>
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    <!-- 🌙 Theme Toggle Switch -->
-    <label class="theme-switch">
-      <input type="checkbox" id="themeToggle">
-      <span class="slider">
-        <span class="icon sun">☀️</span>
-        <span class="icon moon">🌙</span>
-      </span>
-    </label>
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.body.classList.add(savedTheme + "-mode");
+      toggle.checked = savedTheme === "dark";
+    } else {
+      document.body.classList.add(prefersDark ? "dark-mode" : "light-mode");
+      toggle.checked = prefersDark;
+    }
 
-    <!-- 🌙 Theme Toggle Script -->
-    <script>
-      const body = document.body;
-      const toggleInput = document.getElementById("themeToggle");
-
-      // Load saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme === "light") {
-        body.classList.add("light-mode");
-        toggleInput.checked = false;
-      } else if (savedTheme === "dark") {
-        body.classList.add("dark-mode");
-        toggleInput.checked = true;
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
       }
-
-      toggleInput.addEventListener("change", () => {
-        if (toggleInput.checked) {
-          body.classList.remove("light-mode");
-          body.classList.add("dark-mode");
-          localStorage.setItem("theme", "dark");
-        } else {
-          body.classList.remove("dark-mode");
-          body.classList.add("light-mode");
-          localStorage.setItem("theme", "light");
-        }
-      });
-    </script>
-
+    });
+  </script>
 </body>
 </html>
