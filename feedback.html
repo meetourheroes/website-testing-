@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <h1>Hero’s In Action</h1>
+    <p class="subtitle">Promoting safety & trust through fun learning</p>
+    <nav class="page-nav">
+      <a href="index.html" class="nav-button">Home</a>
+      <a href="authors.html" class="nav-button">Meet the Authors</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+      <a href="feedback.html" class="nav-button active">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- Feedback Section -->
+  <main>
+    <section class="contact-section">
+      <!-- Fun Icon -->
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/3159/3159348.png" 
+        alt="Feedback Icon" 
+        class="contact-icon"
+      />
+
+      <h2>We’d Love Your Feedback</h2>
+      <p>Please let us know what you think about our book and website.</p>
+
+      <form
+        action="https://formspree.io/f/manbzdvr"
+        class="fs-form"
+        target="_top"
+        method="POST"
+      >
+        <!-- Name -->
+        <div class="fs-field">
+          <label class="fs-label" for="name">Name</label>
+          <input class="fs-input" id="name" name="name" required />
+        </div>
+
+        <!-- Email -->
+        <div class="fs-field">
+          <label class="fs-label" for="email">Email</label>
+          <input class="fs-input" id="email" name="email" type="email" required />
+        </div>
+
+        <!-- Dropdown -->
+        <div class="fs-field">
+          <label class="fs-label" for="feedback-type">What’s your feedback about?</label>
+          <select class="fs-select" id="feedback-type" name="feedback-type" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="book">The Coloring Book</option>
+            <option value="website">The Website</option>
+            <option value="first-responders">First Responder Education</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Feedback -->
+        <div class="fs-field">
+          <label class="fs-label" for="message">Your Feedback</label>
+          <textarea class="fs-textarea" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="fs-button-group">
+          <button class="fs-button" type="submit">Submit Feedback</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hero’s In Action LLC – All rights reserved.</p>
+  </footer>
+</body>
+</html>
