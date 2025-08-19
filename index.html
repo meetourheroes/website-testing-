@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes in Action: Coloring Book</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_with_darkmode.css">
 </head>
 <body>
     <header>
@@ -47,5 +47,33 @@
     <footer>
         <p>© 2025 Heroes in action LLC</p>
     </footer>
+
+    <!-- 🌙 Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle">Toggle Theme</button>
+
+    <!-- 🌙 Theme Toggle Script -->
+    <script>
+      const body = document.body;
+      const toggleBtn = document.getElementById("themeToggle");
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") body.classList.add("light-mode");
+      if (savedTheme === "dark") body.classList.add("dark-mode");
+
+      toggleBtn.addEventListener("click", () => {
+        if (body.classList.contains("dark-mode")) {
+          body.classList.remove("dark-mode");
+          body.classList.add("light-mode");
+          localStorage.setItem("theme", "light");
+        } else if (body.classList.contains("light-mode")) {
+          body.classList.remove("light-mode");
+          localStorage.removeItem("theme"); // back to system default
+        } else {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        }
+      });
+    </script>
 </body>
 </html>
