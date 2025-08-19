@@ -348,7 +348,7 @@ footer {
 
 
 /* ========================================
-   Dark Mode Support
+   Dark Mode Support (Fixed with Gradients)
    ======================================== */
 
 /* System Dark Mode */
@@ -366,7 +366,7 @@ footer {
   }
 
   body {
-    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
     color: var(--color-text-default);
   }
 
@@ -409,6 +409,9 @@ body.light-mode {
   --color-primary-active: #ffb347;
   --color-text-default: #364958;
   --color-text-muted: #6b7280;
+
+  background: linear-gradient(135deg, #b7eaff 0%, #ffe29a 100%) !important;
+  color: #364958;
 }
 
 /* Force Dark Mode */
@@ -422,4 +425,7 @@ body.dark-mode {
   --color-primary-active: #ff6f61;
   --color-text-default: #f0f0f0;
   --color-text-muted: #bbbbbb;
+
+  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%) !important;
+  color: #f0f0f0;
 }
