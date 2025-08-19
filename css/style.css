@@ -341,4 +341,85 @@ footer {
   25% { transform: rotate(-10deg); }
   75% { transform: rotate(10deg); }
 }
+.success-message {
+  display: none;
+}
 
+
+
+/* ========================================
+   Dark Mode Support
+   ======================================== */
+
+/* System Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #121212;
+    --color-background-alt: #1e1e1e;
+    --color-border-active: #9ecbff;
+    --color-border-default: #555;
+    --color-highlight: #ffb347;
+    --color-primary: #54d2d2;
+    --color-primary-active: #ff6f61;
+    --color-text-default: #f0f0f0;
+    --color-text-muted: #bbbbbb;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    color: var(--color-text-default);
+  }
+
+  header {
+    background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+    border-bottom: 6px solid var(--color-highlight);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+
+  footer {
+    background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+    border-top: 4px solid var(--color-highlight);
+    color: var(--color-text-default);
+  }
+
+  .book-details,
+  .author-card,
+  .why-section,
+  .contact-section {
+    background: var(--color-background-alt);
+    color: var(--color-text-default);
+    border-color: var(--color-border-default);
+  }
+
+  .nav-button,
+  .buy-button,
+  .fs-button {
+    color: var(--color-text-default);
+  }
+}
+
+/* Force Light Mode */
+body.light-mode {
+  --color-background: #ffe29a;
+  --color-background-alt: #e9faff;
+  --color-border-active: #54d2d2;
+  --color-border-default: #ffb347;
+  --color-highlight: #ff6f61;
+  --color-primary: #54d2d2;
+  --color-primary-active: #ffb347;
+  --color-text-default: #364958;
+  --color-text-muted: #6b7280;
+}
+
+/* Force Dark Mode */
+body.dark-mode {
+  --color-background: #121212;
+  --color-background-alt: #1e1e1e;
+  --color-border-active: #9ecbff;
+  --color-border-default: #555;
+  --color-highlight: #ffb347;
+  --color-primary: #54d2d2;
+  --color-primary-active: #ff6f61;
+  --color-text-default: #f0f0f0;
+  --color-text-muted: #bbbbbb;
+}
