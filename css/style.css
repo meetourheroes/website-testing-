@@ -359,8 +359,8 @@ footer {
     --color-highlight: #ffb347;
     --color-primary: #54d2d2;
     --color-primary-active: #ff6f61;
-    --color-text-default: #f0f0f0;
-    --color-text-muted: #bbbbbb;
+    --color-text-default: #ffffff;
+    --color-text-muted: #cccccc;
   }
 
   body {
