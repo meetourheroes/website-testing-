@@ -443,6 +443,15 @@ body.dark-mode .fs-label {
 body.dark-mode .fs-description {
   color: #bbb;
 }
+/* Authors page fixes */
+body.dark-mode .author-name {
+  color: #ffb347; /* brighter amber, easier to read in dark mode */
+}
+
+body.dark-mode .author-bio {
+  color: #fff; /* make bios readable on dark background */
+}
+
 
 
 /* ========================================
