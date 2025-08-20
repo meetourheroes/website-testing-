@@ -387,6 +387,10 @@ body.dark-mode .book-details h2 {
   color: #ffb347;
 }
 
+body.dark-mode .book-details ul {
+  color: #ffffff; /* ✅ bullet list text turns white */
+}
+
 body.dark-mode .author-card {
   background: #2a2a2a;
   border: 2px dashed #777;
