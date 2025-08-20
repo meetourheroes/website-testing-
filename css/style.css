@@ -310,20 +310,21 @@ footer {
    ======================================== */
 
 @media (max-width: 900px) {
-    .book-section,
-    .authors-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    .book-cover,
-    .author-card {
-        margin-bottom: 1rem;
-    }
-    .book-details {
-        padding: 1rem 1rem 1rem;
-    }
+  .book-section,
+  .authors-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+  }
+  .book-cover,
+  .author-card {
+      margin-bottom: 1rem;
+  }
+  .book-details {
+      padding: 1rem 1rem 1rem;
+  }
 }
+
 /* Fun Contact Icon */
 .contact-icon {
   width: 80px;
@@ -443,16 +444,15 @@ body.dark-mode .fs-label {
 body.dark-mode .fs-description {
   color: #bbb;
 }
+
 /* Authors page fixes */
 body.dark-mode .author-name {
-  color: #ffb347; /* brighter amber, easier to read in dark mode */
+  color: #ffb347;
 }
 
 body.dark-mode .author-bio {
-  color: #fff; /* make bios readable on dark background */
+  color: #fff;
 }
-
-
 
 /* ========================================
    Theme Toggle Switch (Top Right with Labels)
@@ -503,4 +503,101 @@ input:checked + .slider:before {
   content: attr(data-dark);
   left: auto;
   right: 10px;
+}
+
+/* ========================================
+   Extra Mobile & Tablet Optimizations
+   ======================================== */
+
+/* Make images scale nicely */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small screens: stack nav vertically */
+@media (max-width: 600px) {
+  .page-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .book-cover {
+    width: 90%;
+    height: auto;
+  }
+
+  .book-details {
+    padding: 1rem;
+  }
+
+  .author-card {
+    width: 90%;
+  }
+
+  /* Make forms stretch across the screen */
+  .fs-input,
+  .fs-textarea,
+  .fs-select {
+    width: 100%;
+  }
+}
+
+/* Touch-friendly buttons */
+.nav-button,
+.fs-button,
+.buy-button {
+  min-height: 44px;
+  padding: 0.9rem 1.5rem;
+}
+
+/* ========================================
+   Dark Mode Mobile Tweaks
+   ======================================== */
+@media (max-width: 600px) {
+  body.dark-mode header {
+    padding: 1.2rem 0.8rem;
+  }
+
+  body.dark-mode h1 {
+    font-size: 2rem;
+  }
+
+  body.dark-mode .subtitle {
+    font-size: 1rem;
+  }
+
+  body.dark-mode .book-details,
+  body.dark-mode .author-card,
+  body.dark-mode .why-section,
+  body.dark-mode .contact-section {
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  body.dark-mode footer {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  body.dark-mode .nav-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  body.dark-mode .fs-input,
+  body.dark-mode .fs-textarea,
+  body.dark-mode .fs-select {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
 }
