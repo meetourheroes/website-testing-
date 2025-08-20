@@ -388,7 +388,7 @@ body.dark-mode .book-details h2 {
 }
 
 body.dark-mode .book-details ul {
-  color: #ffffff; /* ✅ bullet list text turns white */
+  color: #ffffff; /* bullet list fix */
 }
 
 body.dark-mode .author-card {
@@ -413,6 +413,35 @@ body.dark-mode footer {
   background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
   color: #fff;
   border-top: 4px solid #ff6f61;
+}
+
+/* Contact form fixes */
+body.dark-mode .fs-input,
+body.dark-mode .fs-select,
+body.dark-mode .fs-textarea {
+  background: #2a2a2a;
+  border: 2px solid #777;
+  color: #fff;
+}
+
+body.dark-mode .fs-input:focus,
+body.dark-mode .fs-select:focus,
+body.dark-mode .fs-textarea:focus {
+  border-color: #ffb347;
+  box-shadow: 0 0 0 4px #444;
+}
+
+body.dark-mode .fs-label {
+  color: #fff;
+}
+
+.fs-description {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+body.dark-mode .fs-description {
+  color: #bbb;
 }
 
 
