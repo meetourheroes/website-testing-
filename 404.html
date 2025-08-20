@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Heroes in Action</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Extra cartoon styling just for 404 page */
+    .oops {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #ff6f61;
+      text-shadow: 3px 3px 0 #ffe29a, 5px 5px 0 #54d2d2;
+      margin: 1rem 0;
+      animation: bounce 1.5s infinite;
+    }
+    .not-found-message {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #364958;
+      margin-bottom: 2rem;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    /* Dark mode fixes for custom styles */
+    body.dark-mode .oops {
+      color: #ffb347;
+      text-shadow: 3px 3px 0 #2a2a2a, 5px 5px 0 #ff6f61;
+    }
+    body.dark-mode .not-found-message {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <!-- Theme Toggle (pinned top-right) -->
@@ -16,7 +45,7 @@
   <!-- Header -->
   <header>
     <h1>Heroes in Action!</h1>
-    <p class="subtitle">Oops! Looks like you took a wrong turn.</p>
+    <p class="subtitle">Oops! Something went wrong...</p>
     <nav class="page-nav">
       <a href="index.html" class="nav-button">Home</a>
       <a href="authors.html" class="nav-button">Meet the Authors</a>
@@ -28,16 +57,13 @@
 
   <!-- Main Section -->
   <main>
-    <section class="authors-section">
-      <div class="author-card">
-        <img class="author-photo" src="images/coming soon.jpg" alt="Lost Hero">
-        <h2 class="author-name">404 – Page Not Found</h2>
-        <p class="author-bio">
-          The page you’re looking for doesn’t exist. <br>
-          Don’t worry — our heroes will guide you back home!
-        </p>
-        <a href="index.html" class="buy-button">Return Home</a>
-      </div>
+    <section class="contact-section">
+      <div class="oops">404!</div>
+      <p class="not-found-message">
+        Looks like this page ran off on a hero mission!  
+        Don’t worry — our heroes will guide you back.
+      </p>
+      <a href="index.html" class="buy-button">Return Home</a>
     </section>
   </main>
 
