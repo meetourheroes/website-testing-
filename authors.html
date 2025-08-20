@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+     <!-- Theme Toggle (pinned top-right, does not affect layout) -->
+  <label class="theme-switch">
+    <input type="checkbox" id="themeToggle">
+    <div class="slider" data-light="Light" data-dark="Dark"></div>
+  </label>
     <header>
         <h1>Meet the Authors</h1>
         <p class="subtitle">The Creators Behind "Heroes in Action"</p>
@@ -38,5 +43,32 @@
     <footer>
         <p>© 2025 Meet Our Heroes Coloring Book</p>
     </footer>
+
+    <!-- Theme Toggle Script -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.body.classList.add(savedTheme + "-mode");
+      toggle.checked = savedTheme === "dark";
+    } else {
+      document.body.classList.add(prefersDark ? "dark-mode" : "light-mode");
+      toggle.checked = prefersDark;
+    }
+
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
 </body>
 </html>
